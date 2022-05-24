@@ -1,0 +1,33 @@
+---
+title: "LS_alpine"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{LS_alpine}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(Rsagacmd)
+library(terra)
+library(rusleR)
+
+# initiate a saga object
+saga <- saga_gis(raster_backend = "terra")
+
+# load DEM
+f <- system.file("extdata/dem.tif", package="rusleR")
+DEM <- rast(f)
+
+# calculate LS-alpine
+ls <- ls_alpine(dem = DEM)
+
+plot(ls)
+```
