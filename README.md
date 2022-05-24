@@ -6,7 +6,15 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of rusleR is to …
+This package offers an `R` implementation of Universal Soil Loss
+Equation
+([USLE](https://en.wikipedia.org/wiki/Universal_Soil_Loss_Equation)).
+You can find here a collection of functions to estimate main factors:
+R-factor, K-factor, LS-factor and C-factor. The package
+uses[`terra`](https://github.com/rspatial/terra) and
+[`Rsagacmd`](https://github.com/stevenpawley/Rsagacmd/) in the
+background. [`SAGA GIS`](https://sourceforge.net/projects/saga-gis/)
+needs to be install on your machine as well.
 
 ## Installation
 
@@ -20,15 +28,14 @@ devtools::install_github("atsyplenkov/rusleR")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
-
 ``` r
 library(rusleR)
 ## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+This is a basic example which shows you how to calculate LS_alpine
+([Schmidt et al.,
+2019](https://www.sciencedirect.com/science/article/pii/S2215016119300056)):
 
 ``` r
 library(Rsagacmd)
@@ -45,15 +52,25 @@ DEM <- rast(f)
 ls <- ls_alpine(dem = DEM)
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
+As a result of `ls_alpine()` you receive a `SpatRaster` object:
 
-You can also embed plots, for example:
+``` r
+ls
+#> class       : SpatRaster 
+#> dimensions  : 78, 54, 1  (nrow, ncol, nlyr)
+#> resolution  : 27.30756, 27.30756  (x, y)
+#> extent      : 337615.4, 339090, 4814626, 4816756  (xmin, xmax, ymin, ymax)
+#> coord. ref. : WGS 84 / UTM zone 38N (EPSG:32638) 
+#> source      : memory 
+#> name        : LSalpine 
+#> min value   :        0 
+#> max value   : 114.6034
+```
 
 <img src="man/figures/README-pressure-1.png" width="50%" />
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+## To add
+
+-   K-factor functions
+-   R-factor function to crop GLOREDA
+-   C-factor???

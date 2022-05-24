@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of rusleR is to ...
+This package offers an `R` implementation of Universal Soil Loss Equation ([USLE](https://en.wikipedia.org/wiki/Universal_Soil_Loss_Equation)). You can find here a collection of functions to estimate main factors: R-factor, K-factor, LS-factor and C-factor. The package uses[ `terra`](https://github.com/rspatial/terra) and [`Rsagacmd`](https://github.com/stevenpawley/Rsagacmd/) in the background. [`SAGA GIS`](https://sourceforge.net/projects/saga-gis/) needs to be install on your machine as well. 
 
 ## Installation
 
@@ -33,16 +33,14 @@ devtools::install_github("atsyplenkov/rusleR")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
-
 ```{r example}
 library(rusleR)
 ## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+This is a basic example which shows you how to calculate LS_alpine ([Schmidt et al., 2019](https://www.sciencedirect.com/science/article/pii/S2215016119300056)):
 
-```{r cars}
+```{r ls_alpine}
 library(Rsagacmd)
 library(terra)
 
@@ -57,12 +55,16 @@ DEM <- rast(f)
 ls <- ls_alpine(dem = DEM)
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/v1/examples>.
-
-You can also embed plots, for example:
+As a result of `ls_alpine()` you receive a `SpatRaster` object:
+```{r summary}
+ls
+```
 
 ```{r pressure, echo = FALSE}
 plot(ls)
 ```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+## To add
+- K-factor functions
+- R-factor function to crop GLOREDA
+- C-factor???
