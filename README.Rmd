@@ -38,6 +38,7 @@ library(rusleR)
 ## basic example code
 ```
 
+### LS-factor
 This is a basic example which shows you how to calculate LS_alpine ([Schmidt et al., 2019](https://www.sciencedirect.com/science/article/pii/S2215016119300056)):
 
 ```{r ls_alpine}
@@ -64,7 +65,29 @@ ls
 plot(ls)
 ```
 
+### R-factor
+With the help of `get_glored()` function you can quickly download and crop to AOI a Global Rainfall Erosivity Database map ([GLORED](https://esdac.jrc.ec.europa.eu/content/global-rainfall-erosivity)). It was created by [*Panagos et al.* (2017)](https://www.nature.com/articles/s41598-017-04282-8) based on *in-situ* measurements from 3,625 stations. This GLORED was used to develop a global erosivity map at 30 arc-seconds(~1 km) based on a Gaussian Process Regression(GPR). 
+
+```{r glored}
+
+library(terra)
+
+f <- system.file("extdata/extent.shp", package="rusleR")
+v <- vect(f)
+
+r_factor <- get_glored(v)
+
+```
+
+As a result of `get_glored()` you receive a `SpatRaster` object:
+```{r summary_r}
+r_factor
+```
+
+```{r r_plot, echo = FALSE}
+plot(r_factor)
+```
+
 ## To add
 - K-factor functions
-- R-factor function to crop GLOREDA
 - C-factor???
