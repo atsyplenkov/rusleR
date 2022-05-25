@@ -11,8 +11,8 @@
 #' @references Schmidt, Simon, Simon Tresch, and Katrin Meusburger. “Modification of the RUSLE Slope Length and Steepness Factor (LS-Factor) Based on Rainfall Experiments at Steep Alpine Grasslands.” MethodsX 6 (2019): 219–29. https://doi.org/10.1016/j.mex.2019.01.004.
 #'
 #' @examples
+#' \dontrun{
 #' library(Rsagacmd)
-#' library(terra)
 #'
 #' # initiate a saga object
 #' saga <- saga_gis(raster_backend = "terra")
@@ -25,6 +25,7 @@
 #' ls <- ls_alpine(dem = DEM)
 #'
 #' plot(ls)
+#' }
 #'
 #' @export
 #'

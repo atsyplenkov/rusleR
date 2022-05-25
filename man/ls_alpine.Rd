@@ -20,8 +20,8 @@ SpatRaster
 This function calculates an LS-factor from Universal Soil Loss Equation (USLE), as described in \emph{Schmidt et al.} (2019).
 }
 \examples{
+\dontrun{
 library(Rsagacmd)
-library(terra)
 
 # initiate a saga object
 saga <- saga_gis(raster_backend = "terra")
@@ -34,6 +34,7 @@ DEM <- rast(f)
 ls <- ls_alpine(dem = DEM)
 
 plot(ls)
+}
 
 }
 \references{
