@@ -4,12 +4,14 @@
 \alias{get_soilgrids}
 \title{Download SoilGrids layers}
 \usage{
-get_soilgrids(aoi, layer = "all")
+get_soilgrids(aoi, layer = c("all", "sand", "silt", "clay", "soc", "phh2o"))
 }
 \arguments{
 \item{aoi}{SpatVector. A polygon layer with area of interest.}
 
-\item{layer}{character. A string indicating what layers should be downloaded. Either one of the following: \code{'all'}, \code{'sand'}, \code{'clay'}, \code{'silt'} or \code{'soc'}}
+\item{layer}{character. A string indicating what layers should
+be downloaded. Either one of the following: \code{'all'},
+\code{'sand'}, \code{'clay'}, \code{'silt'}, \code{'soc'} or \code{'phh2o'}}
 }
 \value{
 SpatRaster

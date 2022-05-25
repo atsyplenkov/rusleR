@@ -1,7 +1,9 @@
 #' Download SoilGrids layers
 #'
 #' @param aoi SpatVector. A polygon layer with area of interest.
-#' @param layer character. A string indicating what layers should be downloaded. Either one of the following: \code{'all'}, \code{'sand'}, \code{'clay'}, \code{'silt'} or \code{'soc'}
+#' @param layer character. A string indicating what layers should
+#' be downloaded. Either one of the following: \code{'all'},
+#' \code{'sand'}, \code{'clay'}, \code{'silt'}, \code{'soc'} or \code{'phh2o'}
 #'
 #' @return SpatRaster
 #'
@@ -21,7 +23,7 @@
 #' @importFrom purrr map
 #' @import terra
 get_soilgrids <- function(aoi,
-                          layer = "all"){
+                          layer = c("all", "sand", "silt", "clay", "soc", "phh2o")){
 
   # Some check
   stopifnot(
@@ -38,7 +40,7 @@ get_soilgrids <- function(aoi,
 
   # Download links
   sg_url <- "/vsicurl/https://files.isric.org/soilgrids/latest/data/"
-  props <- c("sand", "silt", "clay", "soc")
+  props <- c("sand", "silt", "clay", "soc", "phh2o")
   layers <- c("0-5", "5-15", "15-30")
 
   vrt_sand <- paste0(props[1], "/",
@@ -58,6 +60,11 @@ get_soilgrids <- function(aoi,
 
   vrt_soc <- paste0(props[4], "/",
                     props[4], "_",
+                    layers,
+                    "cm_mean.vrt")
+
+  vrt_phh2o <- paste0(props[5], "/",
+                    props[5], "_",
                     layers,
                     "cm_mean.vrt")
 
@@ -111,13 +118,22 @@ get_soilgrids <- function(aoi,
       terra::rast() |>
       terra::project(aoi_crs)
 
+    cat("Downloading pH rasters")
+    phh2o_rasters <-
+      purrr::map(vrt_phh2o,
+                 ~soilgrids_download(list_vrt = .x,
+                                     shape_igh = aoi_proj)) |>
+      terra::rast() |>
+      terra::project(aoi_crs)
+
     cat("\n")
 
     # Return
     list(sand_rasters,
          silt_rasters,
          clay_rasters,
-         soc_rasters)
+         soc_rasters,
+         phh2o_rasters)
 
   } else if (layer == "sand") {
 
@@ -178,6 +194,21 @@ get_soilgrids <- function(aoi,
     cat("\n")
 
     return(soc_rasters)
+
+  } else if (layer == "phh2o") {
+
+    cat("Downloading pH rasters")
+
+    phh2o_rasters <-
+      purrr::map(vrt_phh2o,
+                 ~soilgrids_download(list_vrt = .x,
+                                     shape_igh = aoi_proj)) |>
+      terra::rast() |>
+      terra::project(aoi_crs)
+
+    cat("\n")
+
+    return(phh2o_rasters)
 
   } else {
 
