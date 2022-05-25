@@ -1,9 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# rusleR
+# rusleR <img src="man/figures/logo.svg" align="right" height="139" />
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/atsyplenkov/rusleR/workflows/R-CMD-check/badge.svg)](https://github.com/atsyplenkov/rusleR/actions)
 <!-- badges: end -->
 
 This package offers an `R` implementation of Universal Soil Loss
