@@ -25,7 +25,7 @@ v <- vect(f)
 
 r_factor <- get_glored(v)
 
-plot(v)
+plot(r_factor)
 
 }
 \references{

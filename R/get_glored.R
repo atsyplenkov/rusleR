@@ -17,7 +17,7 @@
 #'
 #' r_factor <- get_glored(v)
 #'
-#' plot(v)
+#' plot(r_factor)
 #'
 #' @export
 get_glored <- function(aoi,
