@@ -3,3 +3,6 @@
 export(get_glored)
 export(get_soilgrids)
 export(ls_alpine)
+import(Rsagacmd)
+import(terra)
+importFrom(purrr,map)

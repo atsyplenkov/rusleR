@@ -17,6 +17,9 @@
 #' plot(sand)
 #'
 #' @export
+#'
+#' @importFrom purrr map
+#' @import terra
 get_soilgrids <- function(aoi,
                           layer = "all"){
 

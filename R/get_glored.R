@@ -20,6 +20,8 @@
 #' plot(r_factor)
 #'
 #' @export
+#'
+#' @import terra
 get_glored <- function(aoi,
                        warp = TRUE){
 

@@ -27,6 +27,9 @@
 #' plot(ls)
 #'
 #' @export
+#'
+#' @import terra
+#' @import Rsagacmd
 ls_alpine <-
   function(dem,
            threshold = 120,
