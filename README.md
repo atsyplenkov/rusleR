@@ -121,17 +121,12 @@ r_factor
 ## To-do list
 
 -   [x] K-factor functions
-
--   \[\] SDR estimation (see [Batista et al.,
+-   [ ] SDR estimation (see [Batista et al.,
     2021](https://www.sciencedirect.com/science/article/pii/S1364815221000049))
-
--   \[\] Connectivity index (see [Borselli et al.,
+-   [ ] Connectivity index (see [Borselli et al.,
     2008](https://www.sciencedirect.com/science/article/pii/S0341816208000982))
-
--   \[\] IC by [Cavalli et al.,
+-   [ ] IC by [Cavalli et al.,
     2013](https://www.sciencedirect.com/science/article/pii/S0169555X12002267)
-
--   \[\] SDR by [Vigiak et al.,
+-   [ ] SDR by [Vigiak et al.,
     2012](https://www.sciencedirect.com/science/article/pii/S0169555X11004478)
-
--   \[\] C-factor????
+-   [ ] C-factor????

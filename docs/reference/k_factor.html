@@ -99,20 +99,24 @@ Outcome of the <code><a href="aggregate_soilgrids.html">aggregate_soilgrids()</a
 <span class="r-in"><span class="va">clay</span> <span class="op">&lt;-</span> <span class="fu"><a href="get_soilgrids.html">get_soilgrids</a></span><span class="op">(</span><span class="va">v</span>, layer <span class="op">=</span> <span class="st">"clay"</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Downloading Clay rasters...</span>
 <span class="r-in"><span class="va">soc</span> <span class="op">&lt;-</span> <span class="fu"><a href="get_soilgrids.html">get_soilgrids</a></span><span class="op">(</span><span class="va">v</span>, layer <span class="op">=</span> <span class="st">"soc"</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Downloading SOC rasters</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Cannot read 5907288 bytes (GDAL error 3)</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in h(simpleError(msg, call)):</span> error in evaluating the argument 'x' in selecting a method for function 'project': error in evaluating the argument 'x' in selecting a method for function 'rast': [rast] cannot open file: /vsicurl/https://files.isric.org/soilgrids/latest/data/soc/soc_0-5cm_mean.vrt</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Downloading SOC rasters...</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">sand_mean</span> <span class="op">&lt;-</span> <span class="fu"><a href="aggregate_soilgrids.html">aggregate_soilgrids</a></span><span class="op">(</span><span class="va">sand</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">silt_mean</span> <span class="op">&lt;-</span> <span class="fu"><a href="aggregate_soilgrids.html">aggregate_soilgrids</a></span><span class="op">(</span><span class="va">silt</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">clay_mean</span> <span class="op">&lt;-</span> <span class="fu"><a href="aggregate_soilgrids.html">aggregate_soilgrids</a></span><span class="op">(</span><span class="va">clay</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">soc_mean</span> <span class="op">&lt;-</span> <span class="fu"><a href="aggregate_soilgrids.html">aggregate_soilgrids</a></span><span class="op">(</span><span class="va">soc</span><span class="op">)</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in aggregate_soilgrids(soc):</span> object 'soc' not found</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">k</span> <span class="op">&lt;-</span> <span class="fu">k_factor</span><span class="op">(</span><span class="va">sand_mean</span>, <span class="va">silt_mean</span>, <span class="va">clay_mean</span>, <span class="va">soc_mean</span><span class="op">)</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in k_factor(sand_mean, silt_mean, clay_mean, soc_mean):</span> object 'soc_mean' not found</span>
 <span class="r-in"><span class="va">k</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'k' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> class       : SpatRaster </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> dimensions  : 10, 8, 1  (nrow, ncol, nlyr)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> resolution  : 239.5216, 239.5216  (x, y)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> extent      : 337313, 339229.2, 4814440, 4816835  (xmin, xmax, ymin, ymax)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> coord. ref. : +proj=utm +zone=38 +datum=WGS84 +units=m +no_defs </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> source      : memory </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> name        : K_williams1983 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> min value   :     0.06520302 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> max value   :     0.06743016 </span>
 <span class="r-in"></span>
 </code></pre></div>
     </div>
