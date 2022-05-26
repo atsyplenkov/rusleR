@@ -6,6 +6,14 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/atsyplenkov/rusleR/workflows/R-CMD-check/badge.svg)](https://github.com/atsyplenkov/rusleR/actions)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/rusleR)](https://cran.r-project.org/package=rusleR)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2022--05--26-yellowgreen.svg)](/commits/master)
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Project Status: Concept – Minimal or no implementation has been done
+yet, or the repository is only intended to be a limited example, demo,
+or
+proof-of-concept.](https://www.repostatus.org/badges/latest/concept.svg)](https://www.repostatus.org/#concept)
+
 <!-- badges: end -->
 
 This package offers an `R` implementation of Universal Soil Loss
@@ -110,7 +118,20 @@ r_factor
 
 <img src="man/figures/README-r_plot-1.png" width="50%" />
 
-## To add
+## To-do list
 
--   K-factor functions
--   C-factor???
+-   [x] K-factor functions
+
+-   \[\] SDR estimation (see [Batista et al.,
+    2021](https://www.sciencedirect.com/science/article/pii/S1364815221000049))
+
+-   \[\] Connectivity index (see [Borselli et al.,
+    2008](https://www.sciencedirect.com/science/article/pii/S0341816208000982))
+
+-   \[\] IC by [Cavalli et al.,
+    2013](https://www.sciencedirect.com/science/article/pii/S0169555X12002267)
+
+-   \[\] SDR by [Vigiak et al.,
+    2012](https://www.sciencedirect.com/science/article/pii/S0169555X11004478)
+
+-   \[\] C-factor????
