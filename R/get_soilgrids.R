@@ -1,11 +1,16 @@
 #' Download SoilGrids layers
 #'
+#' A function to download [SoilGrids](https://www.isric.org/explore/soilgrids)
+#' dataset, created by \emph{Hengl et al.} (2017)
+#'
 #' @param aoi SpatVector. A polygon layer with area of interest.
 #' @param layer character. A string indicating what layers should
 #' be downloaded. Either one of the following: \code{'all'},
 #' \code{'sand'}, \code{'clay'}, \code{'silt'}, \code{'soc'} or \code{'phh2o'}
 #'
 #' @return SpatRaster
+#'
+#' @references Hengl, Tomislav, Jorge Mendes de Jesus, Gerard B. M. Heuvelink, Maria Ruiperez Gonzalez, Milan Kilibarda, Aleksandar Blagotić, Wei Shangguan, et al. “SoilGrids250m: Global Gridded Soil Information Based on Machine Learning.” PLOS ONE 12, no. 2 (February 16, 2017): e0169748. https://doi.org/10.1371/journal.pone.0169748.
 #'
 #' @examples
 #' library(terra)
@@ -22,6 +27,7 @@
 #'
 #' @importFrom purrr map
 #' @import terra
+#' @md
 get_soilgrids <- function(aoi,
                           layer = c("all", "sand", "silt", "clay", "soc", "phh2o")){
 

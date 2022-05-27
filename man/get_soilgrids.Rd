@@ -17,7 +17,8 @@ be downloaded. Either one of the following: \code{'all'},
 SpatRaster
 }
 \description{
-Download SoilGrids layers
+A function to download \href{https://www.isric.org/explore/soilgrids}{SoilGrids}
+dataset, created by \emph{Hengl et al.} (2017)
 }
 \examples{
 library(terra)
@@ -30,4 +31,7 @@ sand <- get_soilgrids(v, layer = "sand")
 
 plot(sand)
 
+}
+\references{
+Hengl, Tomislav, Jorge Mendes de Jesus, Gerard B. M. Heuvelink, Maria Ruiperez Gonzalez, Milan Kilibarda, Aleksandar Blagotić, Wei Shangguan, et al. “SoilGrids250m: Global Gridded Soil Information Based on Machine Learning.” PLOS ONE 12, no. 2 (February 16, 2017): e0169748. https://doi.org/10.1371/journal.pone.0169748.
 }
