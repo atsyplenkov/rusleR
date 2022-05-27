@@ -7,7 +7,7 @@
 
 [![R-CMD-check](https://github.com/atsyplenkov/rusleR/workflows/R-CMD-check/badge.svg)](https://github.com/atsyplenkov/rusleR/actions)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/rusleR)](https://cran.r-project.org/package=rusleR)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2022--05--26-yellowgreen.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2022--05--27-yellowgreen.svg)](/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Project Status: Concept – Minimal or no implementation has been done
 yet, or the repository is only intended to be a limited example, demo,
@@ -117,6 +117,31 @@ r_factor
 ```
 
 <img src="man/figures/README-r_plot-1.png" width="50%" />
+
+## Citation
+
+While `rusleR` does not redistribute the data or provide it in any way,
+we encourage users to cite original papers when using this package. E.g.
+to cite Panagos et al. (2017) when using GLORED, Hengl et al. (2017)
+when using SoilGrids and Schmidt et al. (2019) when using
+LS<sub>alpine</sub>:
+
+> Panagos, Panos, Pasquale Borrelli, Katrin Meusburger, Bofu Yu, Andreas
+> Klik, Kyoung Jae Lim, Jae E. Yang, et al. “Global Rainfall Erosivity
+> Assessment Based on High-Temporal Resolution Rainfall Records.”
+> Scientific Reports 7, no. 1 (June 23, 2017): 4175.
+> <https://doi.org/10.1038/s41598-017-04282-8>.
+
+> Hengl, Tomislav, Jorge Mendes de Jesus, Gerard B. M. Heuvelink, Maria
+> Ruiperez Gonzalez, Milan Kilibarda, Aleksandar Blagotić, Wei
+> Shangguan, et al. “SoilGrids250m: Global Gridded Soil Information
+> Based on Machine Learning.” PLOS ONE 12, no. 2 (February 16, 2017):
+> e0169748. <https://doi.org/10.1371/journal.pone.0169748>.
+
+> Schmidt, Simon, Simon Tresch, and Katrin Meusburger. “Modification of
+> the RUSLE Slope Length and Steepness Factor (LS-Factor) Based on
+> Rainfall Experiments at Steep Alpine Grasslands.” MethodsX 6 (2019):
+> 219–29. <https://doi.org/10.1016/j.mex.2019.01.004>.
 
 ## To-do list
 
