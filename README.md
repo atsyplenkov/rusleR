@@ -7,7 +7,7 @@
 
 [![R-CMD-check](https://github.com/atsyplenkov/rusleR/workflows/R-CMD-check/badge.svg)](https://github.com/atsyplenkov/rusleR/actions)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/rusleR)](https://cran.r-project.org/package=rusleR)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2022--05--27-yellowgreen.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2022--05--28-yellowgreen.svg)](/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Project Status: Concept – Minimal or no implementation has been done
 yet, or the repository is only intended to be a limited example, demo,
@@ -24,7 +24,12 @@ R-factor, K-factor, LS-factor and C-factor. The package
 uses[`terra`](https://github.com/rspatial/terra) and
 [`Rsagacmd`](https://github.com/stevenpawley/Rsagacmd/) in the
 background. [`SAGA GIS`](https://sourceforge.net/projects/saga-gis/)
-needs to be install on your machine as well.
+need to be installed on your machine as well.
+
+> **Disclaimer!** This package is under development right now. It was
+> tested on Windows 10 only. However, its operability fully depends on
+> `terra` and `Rsagacmd` packages. Therefore it is expected that
+> `rusleR` should work on Linux-based machines as well.
 
 ## Installation
 

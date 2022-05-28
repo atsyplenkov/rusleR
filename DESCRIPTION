@@ -3,10 +3,13 @@ Type: Package
 Title: Universal Soil Loss Equation Estimation
 Version: 0.0.1
 Authors@R: 
-    person("Anatoly", "Tsyplenkov", 
+    c(person("Anatoly", "Tsyplenkov", 
     email = "atsyplenkov@gmail.com",
     role = c("cre", "aut"),
-    comment = c(ORCID = "0000-0003-4144-8402"))
+    comment = c(ORCID = "0000-0003-4144-8402")),
+    person("Simon", "Scheper",
+    role = c("aut"),
+    comment = c(ORCID = "0000-0001-8097-673X")))
 Maintainer: Anatoly Tsyplenkov <atsyplenkov@gmail.com>
 Description: This package offers an R implementation of Universal Soil Loss Equation (USLE).
 License: MIT + file LICENSE

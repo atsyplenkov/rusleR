@@ -26,7 +26,9 @@ knitr::opts_chunk$set(
 
 <!-- badges: end -->
 
-This package offers an `R` implementation of Universal Soil Loss Equation ([USLE](https://en.wikipedia.org/wiki/Universal_Soil_Loss_Equation)). You can find here a collection of functions to estimate main factors: R-factor, K-factor, LS-factor and C-factor. The package uses[ `terra`](https://github.com/rspatial/terra) and [`Rsagacmd`](https://github.com/stevenpawley/Rsagacmd/) in the background. [`SAGA GIS`](https://sourceforge.net/projects/saga-gis/) needs to be install on your machine as well. 
+This package offers an `R` implementation of Universal Soil Loss Equation ([USLE](https://en.wikipedia.org/wiki/Universal_Soil_Loss_Equation)). You can find here a collection of functions to estimate main factors: R-factor, K-factor, LS-factor and C-factor. The package uses[ `terra`](https://github.com/rspatial/terra) and [`Rsagacmd`](https://github.com/stevenpawley/Rsagacmd/) in the background. [`SAGA GIS`](https://sourceforge.net/projects/saga-gis/) need to be installed on your machine as well.
+
+> __Disclaimer!__ This package is under development right now. It was tested on Windows 10 only. However, its operability fully depends on `terra` and `Rsagacmd` packages. Therefore it is expected that `rusleR` should work on Linux-based machines as well.
 
 ## Installation
 
