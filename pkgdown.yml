@@ -1,9 +1,9 @@
 pandoc: 2.7.3
-pkgdown: 2.0.3
+pkgdown: 2.0.4
 pkgdown_sha: ~
 articles:
   LS_alpine: LS_alpine.html
-last_built: 2022-05-28T16:11Z
+last_built: 2022-06-16T12:09Z
 urls:
   reference: https://atsyplenkov.github.io/rusleR/reference
   article: https://atsyplenkov.github.io/rusleR/articles
