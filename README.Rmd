@@ -107,6 +107,7 @@ While `rusleR` does not redistribute the data or provide it in any way, we encou
 
 ## To-do list
 - [x] K-factor functions
+- [ ] New radar-based R factor (https://esdac.jrc.ec.europa.eu/themes/satellite-based-global-r-factor)
 - [ ] SDR estimation (see [Batista et al., 2021](https://www.sciencedirect.com/science/article/pii/S1364815221000049))
 - [ ] Connectivity index (see [Borselli et al., 2008](https://www.sciencedirect.com/science/article/pii/S0341816208000982))
 - [ ] IC by [Cavalli et al., 2013](https://www.sciencedirect.com/science/article/pii/S0169555X12002267)

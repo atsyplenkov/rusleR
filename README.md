@@ -7,7 +7,7 @@
 
 [![R-CMD-check](https://github.com/atsyplenkov/rusleR/workflows/R-CMD-check/badge.svg)](https://github.com/atsyplenkov/rusleR/actions)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/rusleR)](https://cran.r-project.org/package=rusleR)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2022--05--28-yellowgreen.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2022--06--16-yellowgreen.svg)](/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Project Status: Concept – Minimal or no implementation has been done
 yet, or the repository is only intended to be a limited example, demo,
@@ -151,6 +151,8 @@ LS<sub>alpine</sub>:
 ## To-do list
 
 -   [x] K-factor functions
+-   [ ] New radar-based R factor
+    (<https://esdac.jrc.ec.europa.eu/themes/satellite-based-global-r-factor>)
 -   [ ] SDR estimation (see [Batista et al.,
     2021](https://www.sciencedirect.com/science/article/pii/S1364815221000049))
 -   [ ] Connectivity index (see [Borselli et al.,
