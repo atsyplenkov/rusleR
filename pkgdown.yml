@@ -3,7 +3,7 @@ pkgdown: 2.0.4
 pkgdown_sha: ~
 articles:
   LS_alpine: LS_alpine.html
-last_built: 2022-06-16T12:09Z
+last_built: 2022-06-23T12:54Z
 urls:
   reference: https://atsyplenkov.github.io/rusleR/reference
   article: https://atsyplenkov.github.io/rusleR/articles
