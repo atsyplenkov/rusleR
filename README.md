@@ -151,6 +151,7 @@ LS<sub>alpine</sub>:
 ## To-do list
 
 -   [x] K-factor functions
+-   [ ] tidy-loader disclaimer (see `tidyterra` package)
 -   [ ] New radar-based R factor
     (<https://esdac.jrc.ec.europa.eu/themes/satellite-based-global-r-factor>)
 -   [ ] SDR estimation (see [Batista et al.,
