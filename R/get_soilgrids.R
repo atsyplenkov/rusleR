@@ -6,7 +6,11 @@
 #' @param aoi SpatVector. A polygon layer with area of interest.
 #' @param layer character. A string indicating what layers should
 #' be downloaded. Either one of the following: \code{'all'},
-#' \code{'sand'}, \code{'clay'}, \code{'silt'}, \code{'soc'} or \code{'phh2o'}
+#' \code{'sand'}, \code{'clay'}, \code{'silt'}, \code{'soc'},
+#' \code{bdod} or \code{'phh2o'}
+#' @param pred.quantile character. A string indicating what predition
+#' quantiles should be downloaded. Either one of the following: \code{'mean'}
+#' (default), \code{'Q0.05'}, \code{'Q0.95'} or \code{'Q0.05'} (see Details).
 #'
 #' @return SpatRaster
 #'
@@ -29,7 +33,10 @@
 #' @import terra
 #' @md
 get_soilgrids <- function(aoi,
-                          layer = c("all", "sand", "silt", "clay", "soc", "phh2o")){
+                          layer = c("all", "sand", "silt",
+                                    "clay", "soc", "phh2o",
+                                    "bdod"),
+                          pred.quantile = "mean"){
 
   # Some check
   stopifnot(
@@ -46,33 +53,50 @@ get_soilgrids <- function(aoi,
 
   # Download links
   sg_url <- "/vsicurl/https://files.isric.org/soilgrids/latest/data/"
-  props <- c("sand", "silt", "clay", "soc", "phh2o")
+  props <- c("sand", "silt", "clay", "soc", "phh2o", "bdod")
   layers <- c("0-5", "5-15", "15-30")
 
   vrt_sand <- paste0(props[1], "/",
                      props[1], "_",
                      layers,
-                     "cm_mean.vrt")
+                     "cm_",
+                     pred.quantile,
+                     ".vrt")
 
   vrt_silt <- paste0(props[2], "/",
                      props[2], "_",
                      layers,
-                     "cm_mean.vrt")
+                     "cm_",
+                     pred.quantile,
+                     ".vrt")
 
   vrt_clay <- paste0(props[3], "/",
                      props[3], "_",
                      layers,
-                     "cm_mean.vrt")
+                     "cm_",
+                     pred.quantile,
+                     ".vrt")
 
   vrt_soc <- paste0(props[4], "/",
                     props[4], "_",
                     layers,
-                    "cm_mean.vrt")
+                    "cm_",
+                    pred.quantile,
+                    ".vrt")
 
   vrt_phh2o <- paste0(props[5], "/",
-                    props[5], "_",
-                    layers,
-                    "cm_mean.vrt")
+                      props[5], "_",
+                      layers,
+                      "cm_",
+                      pred.quantile,
+                      ".vrt")
+
+  vrt_bdod <- paste0(props[6], "/",
+                     props[6], "_",
+                     layers,
+                     "cm_",
+                     pred.quantile,
+                     ".vrt")
 
 
   # Download function
@@ -132,6 +156,14 @@ get_soilgrids <- function(aoi,
       terra::rast() |>
       terra::project(aoi_crs)
 
+    cat("Downloading bulk density (bdod) rasters")
+    bdod_rasters <-
+      purrr::map(vrt_bdod,
+                 ~soilgrids_download(list_vrt = .x,
+                                     shape_igh = aoi_proj)) |>
+      terra::rast() |>
+      terra::project(aoi_crs)
+
     cat("\n")
 
     # Return
@@ -139,7 +171,9 @@ get_soilgrids <- function(aoi,
          silt_rasters,
          clay_rasters,
          soc_rasters,
-         phh2o_rasters)
+         phh2o_rasters,
+         bdod_rasters
+         )
 
   } else if (layer == "sand") {
 
@@ -216,9 +250,24 @@ get_soilgrids <- function(aoi,
 
     return(phh2o_rasters)
 
+  } else if (layer == "bdod") {
+
+    cat("Downloading bdod rasters")
+
+    bdod_rasters <-
+      purrr::map(vrt_bdod,
+                 ~soilgrids_download(list_vrt = .x,
+                                     shape_igh = aoi_proj)) |>
+      terra::rast() |>
+      terra::project(aoi_crs)
+
+    cat("\n")
+
+    return(bdod_rasters)
+
   } else {
 
-    warning("layer argument should one of the follows: 'all', 'sand', 'clay', 'silt' or 'soc'")
+    warning("layer argument should one of the follows: 'all', 'sand', 'clay', 'silt', 'bdod' or 'soc'")
 
   }
 

@@ -4,14 +4,23 @@
 \alias{get_soilgrids}
 \title{Download SoilGrids layers}
 \usage{
-get_soilgrids(aoi, layer = c("all", "sand", "silt", "clay", "soc", "phh2o"))
+get_soilgrids(
+  aoi,
+  layer = c("all", "sand", "silt", "clay", "soc", "phh2o", "bdod"),
+  pred.quantile = "mean"
+)
 }
 \arguments{
 \item{aoi}{SpatVector. A polygon layer with area of interest.}
 
 \item{layer}{character. A string indicating what layers should
 be downloaded. Either one of the following: \code{'all'},
-\code{'sand'}, \code{'clay'}, \code{'silt'}, \code{'soc'} or \code{'phh2o'}}
+\code{'sand'}, \code{'clay'}, \code{'silt'}, \code{'soc'},
+\code{bdod} or \code{'phh2o'}}
+
+\item{pred.quantile}{character. A string indicating what predition
+quantiles should be downloaded. Either one of the following: \code{'mean'}
+(default), \code{'Q0.05'}, \code{'Q0.95'} or \code{'Q0.05'} (see Details).}
 }
 \value{
 SpatRaster
