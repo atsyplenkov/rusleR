@@ -51,7 +51,7 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">k_factor</span><span class="op">(</span><span class="va">sand</span>, <span class="va">silt</span>, <span class="va">clay</span>, <span class="va">soc</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/terra/man/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"williams1983"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">k_factor</span><span class="op">(</span><span class="va">sand</span>, <span class="va">silt</span>, <span class="va">clay</span>, <span class="va">soc</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"williams1983"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -98,27 +98,27 @@ Outcome of the <code><a href="aggregate_soilgrids.html">aggregate_soilgrids()</a
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://purrr.tidyverse.org" class="external-link">purrr</a></span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/extent.shp"</span>, package<span class="op">=</span><span class="st">"rusleR"</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/terra/man/vect.html" class="external-link">vect</a></span><span class="op">(</span><span class="va">f</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">sand</span> <span class="op">&lt;-</span> <span class="fu"><a href="get_soilgrids.html">get_soilgrids</a></span><span class="op">(</span><span class="va">v</span>, layer <span class="op">=</span> <span class="st">"sand"</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://purrr.tidyverse.org" class="external-link">purrr</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/extent.shp"</span>, package<span class="op">=</span><span class="st">"rusleR"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/terra/man/vect.html" class="external-link">vect</a></span><span class="op">(</span><span class="va">f</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">sand</span> <span class="op">&lt;-</span> <span class="fu"><a href="get_soilgrids.html">get_soilgrids</a></span><span class="op">(</span><span class="va">v</span>, layer <span class="op">=</span> <span class="st">"sand"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Downloading Sand rasters...</span>
-<span class="r-in"><span class="va">silt</span> <span class="op">&lt;-</span> <span class="fu"><a href="get_soilgrids.html">get_soilgrids</a></span><span class="op">(</span><span class="va">v</span>, layer <span class="op">=</span> <span class="st">"silt"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="va">silt</span> <span class="op">&lt;-</span> <span class="fu"><a href="get_soilgrids.html">get_soilgrids</a></span><span class="op">(</span><span class="va">v</span>, layer <span class="op">=</span> <span class="st">"silt"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Downloading Silt rasters...</span>
-<span class="r-in"><span class="va">clay</span> <span class="op">&lt;-</span> <span class="fu"><a href="get_soilgrids.html">get_soilgrids</a></span><span class="op">(</span><span class="va">v</span>, layer <span class="op">=</span> <span class="st">"clay"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="va">clay</span> <span class="op">&lt;-</span> <span class="fu"><a href="get_soilgrids.html">get_soilgrids</a></span><span class="op">(</span><span class="va">v</span>, layer <span class="op">=</span> <span class="st">"clay"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Downloading Clay rasters...</span>
-<span class="r-in"><span class="va">soc</span> <span class="op">&lt;-</span> <span class="fu"><a href="get_soilgrids.html">get_soilgrids</a></span><span class="op">(</span><span class="va">v</span>, layer <span class="op">=</span> <span class="st">"soc"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="va">soc</span> <span class="op">&lt;-</span> <span class="fu"><a href="get_soilgrids.html">get_soilgrids</a></span><span class="op">(</span><span class="va">v</span>, layer <span class="op">=</span> <span class="st">"soc"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Downloading SOC rasters...</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">sand_mean</span> <span class="op">&lt;-</span> <span class="fu"><a href="aggregate_soilgrids.html">aggregate_soilgrids</a></span><span class="op">(</span><span class="va">sand</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">silt_mean</span> <span class="op">&lt;-</span> <span class="fu"><a href="aggregate_soilgrids.html">aggregate_soilgrids</a></span><span class="op">(</span><span class="va">silt</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">clay_mean</span> <span class="op">&lt;-</span> <span class="fu"><a href="aggregate_soilgrids.html">aggregate_soilgrids</a></span><span class="op">(</span><span class="va">clay</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">soc_mean</span> <span class="op">&lt;-</span> <span class="fu"><a href="aggregate_soilgrids.html">aggregate_soilgrids</a></span><span class="op">(</span><span class="va">soc</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">k</span> <span class="op">&lt;-</span> <span class="fu">k_factor</span><span class="op">(</span><span class="va">sand_mean</span>, <span class="va">silt_mean</span>, <span class="va">clay_mean</span>, <span class="va">soc_mean</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">k</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">sand_mean</span> <span class="op">&lt;-</span> <span class="fu"><a href="aggregate_soilgrids.html">aggregate_soilgrids</a></span><span class="op">(</span><span class="va">sand</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">silt_mean</span> <span class="op">&lt;-</span> <span class="fu"><a href="aggregate_soilgrids.html">aggregate_soilgrids</a></span><span class="op">(</span><span class="va">silt</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">clay_mean</span> <span class="op">&lt;-</span> <span class="fu"><a href="aggregate_soilgrids.html">aggregate_soilgrids</a></span><span class="op">(</span><span class="va">clay</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">soc_mean</span> <span class="op">&lt;-</span> <span class="fu"><a href="aggregate_soilgrids.html">aggregate_soilgrids</a></span><span class="op">(</span><span class="va">soc</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">k</span> <span class="op">&lt;-</span> <span class="fu">k_factor</span><span class="op">(</span><span class="va">sand_mean</span>, <span class="va">silt_mean</span>, <span class="va">clay_mean</span>, <span class="va">soc_mean</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">k</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> class       : SpatRaster </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> dimensions  : 10, 8, 1  (nrow, ncol, nlyr)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> resolution  : 239.5216, 239.5216  (x, y)</span>
@@ -128,7 +128,7 @@ Outcome of the <code><a href="aggregate_soilgrids.html">aggregate_soilgrids()</a
 <span class="r-out co"><span class="r-pr">#&gt;</span> name        : K_williams1983 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> min value   :     0.06520302 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> max value   :     0.06743016 </span>
-<span class="r-in"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -140,7 +140,7 @@ Outcome of the <code><a href="aggregate_soilgrids.html">aggregate_soilgrids()</a
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
     </footer></div>
