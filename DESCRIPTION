@@ -1,7 +1,8 @@
 Package: rusleR
 Type: Package
 Title: Universal Soil Loss Equation Estimation
-Version: 0.0.1
+Version: 0.0.2
+Date: 2022-07-14
 Authors@R: 
     c(person("Anatoly", "Tsyplenkov", 
     email = "atsyplenkov@gmail.com",
