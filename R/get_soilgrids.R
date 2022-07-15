@@ -7,7 +7,7 @@
 #' @param layer character. A string indicating what layers should
 #' be downloaded. Either one of the following: \code{'all'},
 #' \code{'sand'}, \code{'clay'}, \code{'silt'}, \code{'soc'},
-#' \code{bdod} or \code{'phh2o'}
+#' \code{bdod}, \code{cfvo} or \code{'phh2o'}
 #' @param pred.quantile character. A string indicating what predition
 #' quantiles should be downloaded. Either one of the following: \code{'mean'}
 #' (default), \code{'Q0.05'}, \code{'Q0.95'} or \code{'Q0.05'} (see Details).
@@ -35,7 +35,7 @@
 get_soilgrids <- function(aoi,
                           layer = c("all", "sand", "silt",
                                     "clay", "soc", "phh2o",
-                                    "bdod"),
+                                    "bdod", "cfvo"),
                           pred.quantile = "mean"){
 
   # Some check
@@ -53,7 +53,7 @@ get_soilgrids <- function(aoi,
 
   # Download links
   sg_url <- "/vsicurl/https://files.isric.org/soilgrids/latest/data/"
-  props <- c("sand", "silt", "clay", "soc", "phh2o", "bdod")
+  props <- c("sand", "silt", "clay", "soc", "phh2o", "bdod", "cfvo")
   layers <- c("0-5", "5-15", "15-30")
 
   vrt_sand <- paste0(props[1], "/",
@@ -98,6 +98,12 @@ get_soilgrids <- function(aoi,
                      pred.quantile,
                      ".vrt")
 
+  vrt_cfvo <- paste0(props[7], "/",
+                     props[7], "_",
+                     layers,
+                     "cm_",
+                     pred.quantile,
+                     ".vrt")
 
   # Download function
   soilgrids_download <- function(list_vrt, # download url
@@ -164,6 +170,14 @@ get_soilgrids <- function(aoi,
       terra::rast() |>
       terra::project(aoi_crs)
 
+    cat("Downloading Volumetric fraction of coarse fragments (cfvo) rasters")
+    cfvo_rasters <-
+      purrr::map(vrt_cfvo,
+                 ~soilgrids_download(list_vrt = .x,
+                                     shape_igh = aoi_proj)) |>
+      terra::rast() |>
+      terra::project(aoi_crs)
+
     cat("\n")
 
     # Return
@@ -172,7 +186,8 @@ get_soilgrids <- function(aoi,
          clay_rasters,
          soc_rasters,
          phh2o_rasters,
-         bdod_rasters
+         bdod_rasters,
+         cfvo_rasters
          )
 
   } else if (layer == "sand") {
@@ -265,9 +280,24 @@ get_soilgrids <- function(aoi,
 
     return(bdod_rasters)
 
+  } else if (layer == "cfvo") {
+
+    cat("Downloading cfvo rasters")
+
+    cfvo_rasters <-
+      purrr::map(vrt_cfvo,
+                 ~soilgrids_download(list_vrt = .x,
+                                     shape_igh = aoi_proj)) |>
+      terra::rast() |>
+      terra::project(aoi_crs)
+
+    cat("\n")
+
+    return(cfvo_rasters)
+
   } else {
 
-    warning("layer argument should one of the follows: 'all', 'sand', 'clay', 'silt', 'bdod' or 'soc'")
+    warning("layer argument should one of the follows: 'all', 'sand', 'clay', 'silt', 'bdod', 'cfvo' or 'soc'")
 
   }
 

@@ -6,7 +6,7 @@
 \usage{
 get_soilgrids(
   aoi,
-  layer = c("all", "sand", "silt", "clay", "soc", "phh2o", "bdod"),
+  layer = c("all", "sand", "silt", "clay", "soc", "phh2o", "bdod", "cfvo"),
   pred.quantile = "mean"
 )
 }
@@ -16,7 +16,7 @@ get_soilgrids(
 \item{layer}{character. A string indicating what layers should
 be downloaded. Either one of the following: \code{'all'},
 \code{'sand'}, \code{'clay'}, \code{'silt'}, \code{'soc'},
-\code{bdod} or \code{'phh2o'}}
+\code{bdod}, \code{cfvo} or \code{'phh2o'}}
 
 \item{pred.quantile}{character. A string indicating what predition
 quantiles should be downloaded. Either one of the following: \code{'mean'}
