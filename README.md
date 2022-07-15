@@ -7,7 +7,7 @@
 
 [![R-CMD-check](https://github.com/atsyplenkov/rusleR/workflows/R-CMD-check/badge.svg)](https://github.com/atsyplenkov/rusleR/actions)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/rusleR)](https://cran.r-project.org/package=rusleR)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2022--06--16-yellowgreen.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2022--07--15-yellowgreen.svg)](/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Project Status: Concept – Minimal or no implementation has been done
 yet, or the repository is only intended to be a limited example, demo,
@@ -163,3 +163,4 @@ LS<sub>alpine</sub>:
 -   [ ] SDR by [Vigiak et al.,
     2012](https://www.sciencedirect.com/science/article/pii/S0169555X11004478)
 -   [ ] C-factor????
+-   [ ] Should I use WhiteboxGeo tools in a backend instead of SAGA??
