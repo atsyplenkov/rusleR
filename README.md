@@ -5,9 +5,10 @@
 
 <!-- badges: start -->
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6992394.svg)](https://doi.org/10.5281/zenodo.6992394)
 [![R-CMD-check](https://github.com/atsyplenkov/rusleR/workflows/R-CMD-check/badge.svg)](https://github.com/atsyplenkov/rusleR/actions)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/rusleR)](https://cran.r-project.org/package=rusleR)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2022--07--15-yellowgreen.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2022--08--15-yellowgreen.svg)](/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Project Status: Concept – Minimal or no implementation has been done
 yet, or the repository is only intended to be a limited example, demo,
@@ -98,6 +99,7 @@ develop a global erosivity map at 30 arc-seconds(\~1 km) based on a
 Gaussian Process Regression(GPR).
 
 ``` r
+
 library(terra)
 
 f <- system.file("extdata/extent.shp", package="rusleR")
@@ -164,3 +166,10 @@ LS<sub>alpine</sub>:
     2012](https://www.sciencedirect.com/science/article/pii/S0169555X11004478)
 -   [ ] C-factor????
 -   [ ] Should I use WhiteboxGeo tools in a backend instead of SAGA??
+
+### ACKNOWLEDGEMENTS
+
+*This package was developed in accordance to the Development program of
+the Interdisciplinary Scientific and Educational School of M.V.
+Lomonosov Moscow State University “Future Planet and Global
+Environmental Change”*

@@ -1,4 +1,22 @@
 url: https://atsyplenkov.github.io/rusleR/
+
 template:
   bootstrap: 5
+  bootswatch: journal
+  bslib:
+    base_font: {google: "Noto Sans"}
+    heading_font: {google: "Roboto Slab"}
+    code_font: {google: "Fira Code"}
 
+navbar:
+  structure:
+    right: [twitter, github]
+  components:
+    twitter:
+      icon: fa-twitter
+      href: http://twitter.com/atsyplen
+      aria-label: Twitter
+    github:
+      icon: fa-github
+      href: https://github.com/atsyplenkov/rusleR
+      aria-label: Github

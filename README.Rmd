@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 # rusleR <img src="man/figures/logo.svg" align="right" height="139" />
 
 <!-- badges: start -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6992394.svg)](https://doi.org/10.5281/zenodo.6992394)
 [![R-CMD-check](https://github.com/atsyplenkov/rusleR/workflows/R-CMD-check/badge.svg)](https://github.com/atsyplenkov/rusleR/actions)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/rusleR)](https://cran.r-project.org/package=rusleR)
 [![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master)
@@ -115,3 +116,7 @@ While `rusleR` does not redistribute the data or provide it in any way, we encou
 - [ ] SDR by [Vigiak et al., 2012](https://www.sciencedirect.com/science/article/pii/S0169555X11004478)
 - [ ] C-factor????
 - [ ] Should I use WhiteboxGeo tools in a backend instead of SAGA??
+
+
+### ACKNOWLEDGEMENTS
+_This package was developed in accordance to the Development program of the Interdisciplinary Scientific and Educational School of M.V. Lomonosov Moscow State University "Future Planet and Global Environmental Change"_

@@ -1,0 +1,25 @@
+citHeader("To cite rusleR in publications use:")
+
+year <- format(Sys.time(), "%Y")
+abs <- trimws(gsub("\\s+", " ", meta$Description))
+abs <- gsub("'", "", abs)
+note <- sprintf("R package version %s", meta$Version)
+doi <- "10.5281/zenodo.6992394"
+
+bibentry(
+  "Manual",
+  title = paste("{rusleR}:", gsub("'", "", meta$Title)),
+  doi = doi,
+  author = c(person("Anatoly", "Tsyplenkov"), person("Simon", "Scheper")),
+  year = year,
+  version = meta$Version,
+  url = "https://github.com/atsyplenkov/rusleR",
+  abstract = abs,
+  note = note,
+  key = "R-rusleR",
+  textVersion = paste0(
+    "Tsyplenkov A (", year, "). rusleR: ",
+    gsub("'", "", meta$Title), ". <https://doi.org/", doi, ">, <",
+    "https://github.com/atsyplenkov/rusleR", ">"
+  )
+)
