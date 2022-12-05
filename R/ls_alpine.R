@@ -1,9 +1,10 @@
-#' ls_alpine
+#' \eqn{LS_{Alpine}}
 #'
-#' @description This function calculates an LS-factor from Universal Soil Loss Equation (USLE), as described in \emph{Schmidt et al.} (2019).
+#' @description This function calculates an LS-factor from Universal Soil
+#' Loss Equation (USLE), as described in \emph{Schmidt et al.} (2019).
 #'
-#' @param dem SpatRaster, single layer with elevation values. Values should have the same unit as the map units, or in meters when the crs is longitude/latitude
-#' @param threshold numeric/double, specifying a flow threshold in meters. Default is 120 m
+#' @param dem SpatRaster. A single layer with elevation values. Values should have the same unit as the map units, or in meters when the crs is longitude/latitude
+#' @param threshold Numeric. Value specifying a flow threshold in meters. Default is 120 m
 #' @param saga_obj SAGA-GIS geoprocessor object. Run \code{Rsagacmd::saga_gis(raster_backend = "terra")}
 #'
 #' @return SpatRaster
@@ -27,10 +28,11 @@
 #' plot(ls)
 #' }
 #'
-#' @export
 #'
 #' @import terra
 #' @import Rsagacmd
+#'
+#' @export
 ls_alpine <-
   function(dem,
            threshold = 120,
@@ -77,7 +79,7 @@ ls_alpine <-
     # resolution (spatres) of 1m of the DEM.
     # We assume that a total of 100 cells with a
     # width of 1m can accumulate
-    threshvalue <- threshold / spatres
+    threshvalue <- threshold * spatres
 
     flow_acc_tr1 <-
       terra::ifel(flow_acc == 0,

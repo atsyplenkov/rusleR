@@ -40,9 +40,27 @@
     <loc>https://atsyplenkov.github.io/rusleR/reference/k_factor.html</loc>
   </url>
   <url>
+    <loc>https://atsyplenkov.github.io/rusleR/reference/ls_2d.html</loc>
+  </url>
+  <url>
     <loc>https://atsyplenkov.github.io/rusleR/reference/ls_alpine.html</loc>
   </url>
   <url>
     <loc>https://atsyplenkov.github.io/rusleR/reference/rusleR-package.html</loc>
+  </url>
+  <url>
+    <loc>https://atsyplenkov.github.io/rusleR/reference/watem_erosion.html</loc>
+  </url>
+  <url>
+    <loc>https://atsyplenkov.github.io/rusleR/reference/watem_flux.html</loc>
+  </url>
+  <url>
+    <loc>https://atsyplenkov.github.io/rusleR/reference/watem_ktc.html</loc>
+  </url>
+  <url>
+    <loc>https://atsyplenkov.github.io/rusleR/reference/watem_ptef.html</loc>
+  </url>
+  <url>
+    <loc>https://atsyplenkov.github.io/rusleR/reference/watem_tc.html</loc>
   </url>
 </urlset>

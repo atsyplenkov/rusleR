@@ -2,14 +2,14 @@
 % Please edit documentation in R/ls_alpine.R
 \name{ls_alpine}
 \alias{ls_alpine}
-\title{ls_alpine}
+\title{\eqn{LS_{Alpine}}}
 \usage{
 ls_alpine(dem, threshold = 120, saga_obj = saga)
 }
 \arguments{
-\item{dem}{SpatRaster, single layer with elevation values. Values should have the same unit as the map units, or in meters when the crs is longitude/latitude}
+\item{dem}{SpatRaster. A single layer with elevation values. Values should have the same unit as the map units, or in meters when the crs is longitude/latitude}
 
-\item{threshold}{numeric/double, specifying a flow threshold in meters. Default is 120 m}
+\item{threshold}{Numeric. Value specifying a flow threshold in meters. Default is 120 m}
 
 \item{saga_obj}{SAGA-GIS geoprocessor object. Run \code{Rsagacmd::saga_gis(raster_backend = "terra")}}
 }
@@ -17,7 +17,8 @@ ls_alpine(dem, threshold = 120, saga_obj = saga)
 SpatRaster
 }
 \description{
-This function calculates an LS-factor from Universal Soil Loss Equation (USLE), as described in \emph{Schmidt et al.} (2019).
+This function calculates an LS-factor from Universal Soil
+Loss Equation (USLE), as described in \emph{Schmidt et al.} (2019).
 }
 \examples{
 \dontrun{
@@ -35,6 +36,7 @@ ls <- ls_alpine(dem = DEM)
 
 plot(ls)
 }
+
 
 }
 \references{

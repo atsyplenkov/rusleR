@@ -16,7 +16,7 @@ units (see SoilGrids FAQ)"><meta property="og:image" content="https://atsyplenko
     
     <a class="navbar-brand me-2" href="../index.html">rusleR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.3</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,7 +91,7 @@ Outcome of the <code><a href="get_soilgrids.html">get_soilgrids()</a></code> fun
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://purrr.tidyverse.org" class="external-link">purrr</a></span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://purrr.tidyverse.org/" class="external-link">purrr</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/extent.shp"</span>, package<span class="op">=</span><span class="st">"rusleR"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/terra/man/vect.html" class="external-link">vect</a></span><span class="op">(</span><span class="va">f</span><span class="op">)</span></span></span>
@@ -106,8 +106,8 @@ Outcome of the <code><a href="get_soilgrids.html">get_soilgrids()</a></code> fun
 <span class="r-out co"><span class="r-pr">#&gt;</span> coord. ref. : +proj=utm +zone=38 +datum=WGS84 +units=m +no_defs </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> source      : memory </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> names       : sand_0-5cm_mean, sand_5-15cm_mean, sand_15-30cm_mean </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> min values  :             286,              293,               288 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> max values  :        314.8233,         319.0000,          318.8233 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> min values  :        286.0000,              293,          288.0000 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> max values  :        314.8233,              319,          318.8233 </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">sand_agg</span> <span class="op">&lt;-</span> <span class="fu">aggregate_soilgrids</span><span class="op">(</span><span class="va">sand</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">sand_agg</span></span></span>
@@ -118,7 +118,7 @@ Outcome of the <code><a href="get_soilgrids.html">get_soilgrids()</a></code> fun
 <span class="r-out co"><span class="r-pr">#&gt;</span> coord. ref. : +proj=utm +zone=38 +datum=WGS84 +units=m +no_defs </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> source      : memory </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> name        :     sand </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> min value   :     28.9 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> min value   : 28.90000 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> max value   : 31.70977 </span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
