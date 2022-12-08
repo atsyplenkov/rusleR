@@ -7,9 +7,9 @@
    viewBox="0 0 72.841743 84.110405"
    version="1.1"
    id="svg8"
-   sodipodi:docname="mnks-logo_dec2019.svg"
-   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
-   inkscape:export-filename="C:\Users\ATSYPLENKOV\Dropbox\05_PROJECTS\08_МНКС2020\XIII_МНКС_лого-2.png"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:export-filename="logo.png"
    inkscape:export-xdpi="500"
    inkscape:export-ydpi="500"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -62,10 +62,10 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="85.714286"
+     inkscape:cx="84.285714"
      inkscape:cy="131.42857"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="g19494"
      showgrid="false"
      inkscape:snap-bbox="false"
      inkscape:bbox-nodes="true"
@@ -77,7 +77,7 @@
      inkscape:snap-intersection-paths="true"
      inkscape:snap-smooth-nodes="true"
      inkscape:window-width="1920"
-     inkscape:window-height="986"
+     inkscape:window-height="974"
      inkscape:window-x="-11"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
@@ -85,7 +85,9 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:pagecheckerboard="0">
+     inkscape:pagecheckerboard="0"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
        id="grid962"
@@ -536,15 +538,15 @@
          inkscape:connector-curvature="0" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:14.1111px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-         x="46.859913"
-         y="176.42252"
+         style="font-style:normal;font-weight:normal;font-size:14.1111px;line-height:1.25;font-family:sans-serif;letter-spacing:-0.0211667px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="43.155743"
+         y="173.77672"
          id="text3165"><tspan
            sodipodi:role="line"
            id="tspan3163"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:14.1111px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold Condensed';stroke-width:0.264583"
-           x="46.859913"
-           y="176.42252">rusleR</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.1111px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';stroke-width:0.264583"
+           x="43.155743"
+           y="173.77672">rusleR</tspan></text>
     </g>
     <path
        sodipodi:type="star"

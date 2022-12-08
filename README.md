@@ -1,14 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# rusleR <img src="man/figures/logo.svg" align="right" height="139" />
+# rusleR <img src="man/figures/logo.png" align="right" height="139" />
 
 <!-- badges: start -->
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6992394.svg)](https://doi.org/10.5281/zenodo.6992394)
 [![R-CMD-check](https://github.com/atsyplenkov/rusleR/workflows/R-CMD-check/badge.svg)](https://github.com/atsyplenkov/rusleR/actions)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/rusleR)](https://cran.r-project.org/package=rusleR)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2022--08--15-yellowgreen.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2022--12--08-yellowgreen.svg)](/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Project Status: Concept – Minimal or no implementation has been done
 yet, or the repository is only intended to be a limited example, demo,
@@ -44,10 +44,11 @@ devtools::install_github("atsyplenkov/rusleR")
 
 ## Example
 
-``` r
-library(rusleR)
-## basic example code
-```
+The brief introduction to the `rusleR` package were made at the
+[IAHS-WasWac workshop](megapolis2022.netlify.app) in December 2022. You
+can see it on YouTube:
+
+[![MEGAPOLIS2022](https://yt-embed.live/embed?v=B2ian7Gmodc)](https://youtu.be/B2ian7Gmodc?t=5578)
 
 ### LS-factor
 
@@ -56,6 +57,7 @@ This is a basic example which shows you how to calculate LS_alpine
 2019](https://www.sciencedirect.com/science/article/pii/S2215016119300056)):
 
 ``` r
+library(rusleR)
 library(Rsagacmd)
 library(terra)
 
@@ -81,8 +83,8 @@ ls
 #> coord. ref. : WGS 84 / UTM zone 38N (EPSG:32638) 
 #> source      : memory 
 #> name        : LSalpine 
-#> min value   :        0 
-#> max value   : 114.6034
+#> min value   :   0.0000 
+#> max value   : 660.0054
 ```
 
 <img src="man/figures/README-pressure-1.png" width="50%" />
@@ -99,7 +101,7 @@ develop a global erosivity map at 30 arc-seconds(\~1 km) based on a
 Gaussian Process Regression(GPR).
 
 ``` r
-
+library(rusleR)
 library(terra)
 
 f <- system.file("extdata/extent.shp", package="rusleR")
@@ -152,20 +154,22 @@ LS<sub>alpine</sub>:
 
 ## To-do list
 
--   [x] K-factor functions
--   [ ] tidy-loader disclaimer (see `tidyterra` package)
--   [ ] New radar-based R factor
-    (<https://esdac.jrc.ec.europa.eu/themes/satellite-based-global-r-factor>)
--   [ ] SDR estimation (see [Batista et al.,
-    2021](https://www.sciencedirect.com/science/article/pii/S1364815221000049))
--   [ ] Connectivity index (see [Borselli et al.,
-    2008](https://www.sciencedirect.com/science/article/pii/S0341816208000982))
--   [ ] IC by [Cavalli et al.,
-    2013](https://www.sciencedirect.com/science/article/pii/S0169555X12002267)
--   [ ] SDR by [Vigiak et al.,
-    2012](https://www.sciencedirect.com/science/article/pii/S0169555X11004478)
--   [ ] C-factor????
--   [ ] Should I use WhiteboxGeo tools in a backend instead of SAGA??
+- [x] K-factor functions
+- [x] Watem/Sedem functions
+- [x] Vignettes
+- [ ] tidy-loader disclaimer (see `tidyterra` package)
+- [ ] New radar-based R factor
+  (<https://esdac.jrc.ec.europa.eu/themes/satellite-based-global-r-factor>)
+- [ ] SDR estimation (see [Batista et al.,
+  2021](https://www.sciencedirect.com/science/article/pii/S1364815221000049))
+- [ ] Connectivity index (see [Borselli et al.,
+  2008](https://www.sciencedirect.com/science/article/pii/S0341816208000982))
+- [ ] IC by [Cavalli et al.,
+  2013](https://www.sciencedirect.com/science/article/pii/S0169555X12002267)
+- [ ] SDR by [Vigiak et al.,
+  2012](https://www.sciencedirect.com/science/article/pii/S0169555X11004478)
+- [ ] C-factor????
+- [ ] Should I use WhiteboxGeo tools in a backend instead of SAGA??
 
 ### ACKNOWLEDGEMENTS
 

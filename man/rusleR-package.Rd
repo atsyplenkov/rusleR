@@ -6,6 +6,8 @@
 \alias{rusleR-package}
 \title{rusleR: Universal Soil Loss Equation Estimation}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 This package offers an R implementation of Universal Soil Loss Equation (USLE).
 }
 \seealso{

@@ -35,7 +35,7 @@ get_glored <- function(aoi,
   aoi_crs <- terra::crs(aoi, proj = TRUE)
 
   # LOAD COG
-  glored <- terra::rast("/vsicurl/https://storage.yandexcloud.net/glored/out.tiff")
+  glored <- terra::rast("/vsicurl/https://github.com/atsyplenkov/rusleR/releases/download/GlOREDa/out.tiff")
 
   # Get GLORED CRS
   glored_crs <- terra::crs(glored, proj = TRUE)
