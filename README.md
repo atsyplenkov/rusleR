@@ -8,7 +8,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6992394.svg)](https://doi.org/10.5281/zenodo.6992394)
 [![R-CMD-check](https://github.com/atsyplenkov/rusleR/workflows/R-CMD-check/badge.svg)](https://github.com/atsyplenkov/rusleR/actions)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/rusleR)](https://cran.r-project.org/package=rusleR)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2022--12--08-yellowgreen.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2023--02--23-yellowgreen.svg)](/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Project Status: Concept – Minimal or no implementation has been done
 yet, or the repository is only intended to be a limited example, demo,
@@ -45,8 +45,8 @@ devtools::install_github("atsyplenkov/rusleR")
 ## Example
 
 The brief introduction to the `rusleR` package were made at the
-[IAHS-WasWac workshop](megapolis2022.netlify.app) in December 2022. You
-can see it on YouTube:
+[IAHS-WasWac workshop](https://megapolis2022.netlify.app) in December
+2022. You can see it on YouTube:
 
 [![MEGAPOLIS2022](https://yt-embed.live/embed?v=B2ian7Gmodc)](https://youtu.be/B2ian7Gmodc?t=5578)
 
@@ -81,7 +81,7 @@ ls
 #> resolution  : 27.30756, 27.30756  (x, y)
 #> extent      : 337615.4, 339090, 4814626, 4816756  (xmin, xmax, ymin, ymax)
 #> coord. ref. : WGS 84 / UTM zone 38N (EPSG:32638) 
-#> source      : memory 
+#> source(s)   : memory
 #> name        : LSalpine 
 #> min value   :   0.0000 
 #> max value   : 660.0054
@@ -97,7 +97,7 @@ crop to AOI a Global Rainfall Erosivity Database map
 It was created by [*Panagos et al.*
 (2017)](https://www.nature.com/articles/s41598-017-04282-8) based on
 *in-situ* measurements from 3,625 stations. This GLORED was used to
-develop a global erosivity map at 30 arc-seconds(\~1 km) based on a
+develop a global erosivity map at 30 arc-seconds(~1 km) based on a
 Gaussian Process Regression(GPR).
 
 ``` r
@@ -119,7 +119,7 @@ r_factor
 #> resolution  : 809.8197, 809.8197  (x, y)
 #> extent      : 337544.9, 339164.5, 4814761, 4816381  (xmin, xmax, ymin, ymax)
 #> coord. ref. : +proj=utm +zone=38 +datum=WGS84 +units=m +no_defs 
-#> source      : memory 
+#> source(s)   : memory
 #> name        :      out 
 #> min value   : 682.1308 
 #> max value   : 820.8951

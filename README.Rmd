@@ -42,7 +42,7 @@ devtools::install_github("atsyplenkov/rusleR")
 
 ## Example
 
-The brief introduction to the `rusleR` package were made at the [IAHS-WasWac workshop](megapolis2022.netlify.app) in December 2022. You can see it on YouTube:
+The brief introduction to the `rusleR` package were made at the [IAHS-WasWac workshop](https://megapolis2022.netlify.app) in December 2022. You can see it on YouTube:
 
 [![MEGAPOLIS2022](https://yt-embed.live/embed?v=B2ian7Gmodc)](https://youtu.be/B2ian7Gmodc?t=5578)
 
